@@ -29,6 +29,7 @@
                <footer>
                     <p>&copy; Datt Man Products, LLC</p>
                     <p>Datt Man Products, LLC is not responsible for whatever opinions and remarks come from this website.</p>
+                    <p>Matt's over there playing hero ball and won't let me help him... Jerk.</p>
                 </footer>  
     </div>
     </div>
