@@ -175,6 +175,7 @@
             font-family: sans-serif;
             font-size: 3em;
             clear: both;
+            padding-top: 50px;
         }
     </style>
 </head>
