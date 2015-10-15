@@ -110,16 +110,42 @@
                 document.getElementById("slotNumber3").innerHTML = '<img src="doctorweird.jpg" height="100" width="100px" alt="Doctor Weird" />';
                          
             }
-            
-            if (slotNumberOne == slotNumberTwo && slotNumberOne == slotNumberThree) {
-               
+
+            if (slotNumberOne == slotNumberTwo && slotNumberOne == slotNumberThree) 
+            {
                 document.getElementById("win").innerHTML = "YOU WIN!!!";
-                alert("YOU WIN!")
+                x = new Audio("YEAH, TONIGHT!!.wav")
+                x.onplaying = function() {
+                }
+                x.play();
+
+                
             }
-                        
+            else if (slotNumberOne == slotNumberTwo || slotNumberOne == slotNumberThree || slotNumberTwo == slotNumberThree) 
+                
+            {
+                document.getElementById("win").innerHTML = "A match of two";
+                x = new Audio("magicHouse.wav")
+                x.onplaying = function() {
+                }
+                x.play();
+
+            }
+            else if (slotNumberOne != slotNumberTwo || slotNumberOne != slotNumberThree || slotNumberTwo != slotNumberThree) 
             
+            {
+                document.getElementById("win").innerHTML = "NOPE."
+                
+                x = new Audio("tonightYou.wav")
+                x.onplaying = function() {
+                }
+                x.play();
+                
+            }
+
         }
-</script>
+        
+    </script>
     <style type="text/css">
         #game {
             background: black;
@@ -167,7 +193,7 @@
             overflow: hidden;
         }
         #winner {
-            width: 300px;
+            width: 700px;
             height: 50px;
             margin: -300px auto 0 auto;
             color: black;
@@ -176,6 +202,7 @@
             font-size: 3em;
             clear: both;
             padding-top: 50px;
+            text-align:center;
         }
     </style>
 </head>
@@ -216,6 +243,9 @@
                         </div>
                         <div id="winner">
                             <p id="win"></p>
+                            <div id="audio1">
+                                
+                            </div>
                         </div>
 
             </div>
