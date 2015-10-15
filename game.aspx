@@ -110,12 +110,21 @@
                 document.getElementById("slotNumber3").innerHTML = '<img src="doctorweird.jpg" height="100" width="100px" alt="Doctor Weird" />';
                          
             }
-            
+
             if (slotNumberOne == slotNumberTwo && slotNumberOne == slotNumberThree) {
-               
+
                 document.getElementById("win").innerHTML = "YOU WIN!!!";
                 alert("YOU WIN!")
             }
+            else if (slotNumberOne == slotNumberTwo || slotNumberOne == slotNumberThree) {
+                alert("TWO MATCHES HOMIE!")
+                document.getElementById("win").innerHTML = "TWO MATCHES HOMIE!";
+            }
+            else if (slotNumberTwo == slotNumberThree) {
+                alert("TWO MATCHES HOMIE!")
+                document.getElementById("win").innerHTML = "TWO MATCHES HOMIE!";
+            }
+            
                         
             
         }
