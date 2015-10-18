@@ -111,8 +111,13 @@
                          
             }
 
+<<<<<<< HEAD
             if (slotNumberOne == slotNumberTwo && slotNumberOne == slotNumberThree) 
             {
+=======
+            if (slotNumberOne == slotNumberTwo && slotNumberOne == slotNumberThree) {
+
+>>>>>>> origin/master
                 document.getElementById("win").innerHTML = "YOU WIN!!!";
                 x = new Audio("YEAH, TONIGHT!!.wav")
                 x.onplaying = function() {
@@ -121,6 +126,7 @@
 
                 
             }
+<<<<<<< HEAD
             else if (slotNumberOne == slotNumberTwo || slotNumberOne == slotNumberThree || slotNumberTwo == slotNumberThree) 
                 
             {
@@ -132,6 +138,18 @@
 
             }
             else if (slotNumberOne != slotNumberTwo || slotNumberOne != slotNumberThree || slotNumberTwo != slotNumberThree) 
+=======
+            else if (slotNumberOne == slotNumberTwo || slotNumberOne == slotNumberThree) {
+                alert("TWO MATCHES HOMIE!")
+                document.getElementById("win").innerHTML = "TWO MATCHES HOMIE!";
+            }
+            else if (slotNumberTwo == slotNumberThree) {
+                alert("TWO MATCHES HOMIE!")
+                document.getElementById("win").innerHTML = "TWO MATCHES HOMIE!";
+            }
+            
+                        
+>>>>>>> origin/master
             
             {
                 document.getElementById("win").innerHTML = "NOPE."
