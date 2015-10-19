@@ -3,165 +3,160 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title>ATHF Slot Machine</title>
     <link rel="Stylesheet" type="text/css" href="css.css" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <script>
-        
+
+        var wins = 0;
+        var twoMatch = 0;
+        var noMatch = 0;
+    
+  
+
         $(document).ready(
-                function(){
-                $('.xbutton').click(function() {
+                function() {
+                    $('.xbutton').click(function() {
                         $('#game').show();
-                }
+                    }
                 );
                 }
         );
         $(document).ready(
-                function(){
-                $('.xbutton').click(function() {
+                function() {
+                    $('.xbutton').click(function() {
                         $('#playbutton').hide();
-                }
+                    }
                 );
                 }
         );
-        
-        
-        
+
+
+
+
+
         function clicked() {
-            
+
             var slotNumberOne = Math.floor(Math.random() * 6);
             var slotNumberTwo = Math.floor(Math.random() * 6);
-            var slotNumberThree = Math.floor(Math.random()* 6);
-            
+            var slotNumberThree = Math.floor(Math.random() * 6);
 
-                    
+
             //on click the game will spin
             if (slotNumberOne == 0) {
                 document.getElementById("slotNumber1").innerHTML = '<img src="mastershake.jpg" height="100" width="100px" alt="Master Shake" />';
-                
+
             }
             else if (slotNumberOne == 1) {
                 document.getElementById("slotNumber1").innerHTML = '<img src="frylock.jpg" height="100" width="100px" alt="Frylock" />';
-               
+
             }
             else if (slotNumberOne == 2) {
                 document.getElementById("slotNumber1").innerHTML = '<img src="meatwad.jpg" height="100" width="100px" alt="Meatwad" />';
-               
+
             }
             else if (slotNumberOne == 3) {
                 document.getElementById("slotNumber1").innerHTML = '<img src="err.jpg" height="100" width="100px" alt="Err" />';
-                         
+
             }
             else if (slotNumberOne == 4) {
                 document.getElementById("slotNumber1").innerHTML = '<img src="carl.jpg" height="100" width="100px" alt="Carl" />';
-                         
+
             }
             else if (slotNumberOne == 5) {
                 document.getElementById("slotNumber1").innerHTML = '<img src="doctorweird.jpg" height="100" width="100px" alt="Doctor Weird" />';
-                         
+
             }
             if (slotNumberTwo == 0) {
                 document.getElementById("slotNumber2").innerHTML = '<img src="mastershake.jpg" height="100" width="100px" alt="Master Shake" />';
-                
+
             }
             else if (slotNumberTwo == 1) {
                 document.getElementById("slotNumber2").innerHTML = '<img src="frylock.jpg" height="100" width="100px" alt="Frylock" />';
-                   
+
             }
             else if (slotNumberTwo == 2) {
                 document.getElementById("slotNumber2").innerHTML = '<img src="meatwad.jpg" height="100" width="100px" alt="Meatwad" />';
-                       
+
             }
             else if (slotNumberTwo == 3) {
                 document.getElementById("slotNumber2").innerHTML = '<img src="err.jpg" height="100" width="100px" alt="Err" />';
-                         
+
             }
             else if (slotNumberTwo == 4) {
                 document.getElementById("slotNumber2").innerHTML = '<img src="carl.jpg" height="100" width="100px" alt="Carl" />';
-                         
+
             }
             else if (slotNumberTwo == 5) {
                 document.getElementById("slotNumber2").innerHTML = '<img src="doctorweird.jpg" height="100" width="100px" alt="Doctor Weird" />';
-                         
+
             }
             if (slotNumberThree == 0) {
                 document.getElementById("slotNumber3").innerHTML = '<img src="mastershake.jpg" height="100" width="100px" alt="Master Shake" />';
-                
+
             }
             else if (slotNumberThree == 1) {
                 document.getElementById("slotNumber3").innerHTML = '<img src="frylock.jpg" height="100" width="100px" alt="Frylock" />';
-                   
+
             }
             else if (slotNumberThree == 2) {
                 document.getElementById("slotNumber3").innerHTML = '<img src="meatwad.jpg" height="100" width="100px" alt="Meatwad" />';
-                       
+
             }
             else if (slotNumberThree == 3) {
                 document.getElementById("slotNumber3").innerHTML = '<img src="err.jpg" height="100" width="100px" alt="Err" />';
-                         
+
             }
             else if (slotNumberThree == 4) {
                 document.getElementById("slotNumber3").innerHTML = '<img src="carl.jpg" height="100" width="100px" alt="Carl" />';
-                         
+
             }
             else if (slotNumberThree == 5) {
                 document.getElementById("slotNumber3").innerHTML = '<img src="doctorweird.jpg" height="100" width="100px" alt="Doctor Weird" />';
-                         
+
             }
-
-<<<<<<< HEAD
-            if (slotNumberOne == slotNumberTwo && slotNumberOne == slotNumberThree) 
-            {
-=======
             if (slotNumberOne == slotNumberTwo && slotNumberOne == slotNumberThree) {
-
->>>>>>> origin/master
                 document.getElementById("win").innerHTML = "YOU WIN!!!";
+
+                wins++;
+                
                 x = new Audio("YEAH, TONIGHT!!.wav")
                 x.onplaying = function() {
                 }
                 x.play();
 
-                
             }
-<<<<<<< HEAD
-            else if (slotNumberOne == slotNumberTwo || slotNumberOne == slotNumberThree || slotNumberTwo == slotNumberThree) 
-                
-            {
-                document.getElementById("win").innerHTML = "A match of two";
+            else if (slotNumberOne == slotNumberTwo || slotNumberOne == slotNumberThree || slotNumberTwo == slotNumberThree) {
+            document.getElementById("win").innerHTML = "You have matched two.";
+
+            twoMatch++;
                 x = new Audio("magicHouse.wav")
                 x.onplaying = function() {
                 }
                 x.play();
-
             }
-            else if (slotNumberOne != slotNumberTwo || slotNumberOne != slotNumberThree || slotNumberTwo != slotNumberThree) 
-=======
-            else if (slotNumberOne == slotNumberTwo || slotNumberOne == slotNumberThree) {
-                alert("TWO MATCHES HOMIE!")
-                document.getElementById("win").innerHTML = "TWO MATCHES HOMIE!";
-            }
-            else if (slotNumberTwo == slotNumberThree) {
-                alert("TWO MATCHES HOMIE!")
-                document.getElementById("win").innerHTML = "TWO MATCHES HOMIE!";
-            }
-            
-                        
->>>>>>> origin/master
-            
-            {
-                document.getElementById("win").innerHTML = "NOPE."
-                
+            else if (slotNumberOne != slotNumberTwo || slotNumberOne != slotNumberThree || slotNumberTwo != slotNumberThree) {
+            document.getElementById("win").innerHTML = "NOPE."
+            noMatch++;
                 x = new Audio("tonightYou.wav")
                 x.onplaying = function() {
                 }
                 x.play();
-                
+
             }
 
+            updateScore();
         }
+
+        function updateScore() {
+
+            document.getElementById("Three").innerHTML = wins;
+            document.getElementById("Two").innerHTML = twoMatch;
+            document.getElementById("None").innerHTML = noMatch;
+        }
+
         
     </script>
     <style type="text/css">
@@ -205,7 +200,7 @@
         }
         #slot3 {
             width: 100px;
-            height: 100px   ;
+            height: 100px;
             margin: 5px;
             float: left;
             overflow: hidden;
@@ -222,6 +217,17 @@
             padding-top: 50px;
             text-align:center;
         }
+        
+        #ThreeCounterDiv{font-size:20px;margin-left:5px;}
+        #TwoCounterDiv{font-size:20px;margin-left:5px;}
+        #ZeroCounter{;font-size:20px;margin-left:5px;}
+
+        #Three{font-size:20px;display:inline;margin-left:2px;}
+        #Two{font-size:20px;display:inline;margin-left:2px;}
+        #None{font-size:20px;display:inline;margin-left:2px;}
+        
+        
+        
     </style>
 </head>
 <body>
@@ -241,6 +247,9 @@
         </nav>
     <!-- NAVIGATION ENDS HERE -->
     <div class="maincontent">
+                    <div id="ThreeCounterDiv">3 Matches:<div id="Three">0</div></div>
+                    <div id="TwoCounterDiv">2 Matches:<div id="Two">0</div></div>
+                    <div id="ZeroCounter">You Get Nothing:<div id="None">0</div></div>
     
                 <div id="game">
                         <h3 class="title">GAME</h3>
@@ -262,15 +271,14 @@
                         <div id="winner">
                             <p id="win"></p>
                             <div id="audio1">
-                                
                             </div>
                         </div>
 
             </div>
+
                 <footer>
                     <p>&copy; Datt Man Products, LLC</p>
                     <p>Datt Man Products, LLC is not responsible for whatever opinions and remarks come from this website.</p>
-                    <p>Matt's over there playing hero ball and won't let me help him... Jerk.</p>
                 </footer>  
             
             
